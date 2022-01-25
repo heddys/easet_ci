@@ -24,6 +24,7 @@ class Home extends CI_Controller {
 		$this->load->model('model_db');
 
 		$data['get_kecamatan']=$this->model_db->get_per_kecamatan();
+		$data['get_kecamatan_ipr']=$this->model_db->get_per_kecamatan_ipr();
 		$this->load->view('header');
 		$this->load->view('main_page',$data);
 		$this->load->view('footer');
@@ -50,13 +51,16 @@ class Home extends CI_Controller {
 
 	public function tampil_pemegang(){
 		$reg = $this->input->post('id');
+		// $reg = "12345678-0000-105280-1";
 		$result = $this->model_db->get_pemegang_by($reg);
 		echo json_encode($result);
+		// var_dump('<pre>'.print_r($result,true).'</pre>');
 
 	}
 
 	public function tampil_per_ipr(){
-		$kecamatan = $this->input->post('id');
+		// $kecamatan = $this->input->post('id');
+		$kecamatan = "Semampir";
 		$result = $this->model_db->get_ipr_by($kecamatan);
 		echo json_encode($result);
 

@@ -55,7 +55,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>104</h3>
+                <h3>19</h3>
 
                 <p>Ijin Pemakaian Rumah</p>
               </div>
@@ -116,32 +116,14 @@
                 <h5 class="widget-user-desc">Jumlah IPR Jatuh Tempo</h5>
               </div>
               <div class="card-footer p-0">
-                <ul class="nav flex-column">
+              <ul class="nav flex-column">
+                <?php foreach ($get_kecamatan_ipr->result() as $row) {?>
                   <li class="nav-item">
                     <a href="#" class="nav-link">
-                      Surabaya Pusat <span class="float-right badge bg-primary">55</span>
+                      <?php echo $row->kecamatan;?> <span class="float-right badge bg-primary"><?php echo $row->jml_pemegang?></span>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Surabaya Barat <span class="float-right badge bg-info">10</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Surabaya Timur <span class="float-right badge bg-success">2</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Surabaya Selatan <span class="float-right badge bg-danger">345</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Surabaya Utara <span class="float-right badge bg-danger">125</span>
-                    </a>
-                  </li>
+                  <?php }?>
                 </ul>
               </div>
             </div>

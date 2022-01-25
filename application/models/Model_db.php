@@ -28,9 +28,10 @@ class Model_db extends CI_Model{
     }
 
     function get_ipr_by($kecamatan){
-        $this->db->select('id_ipr,lokasi_ipr,no_sk,masa_sk,luas_bangunan');
+        $this->db->select('id_ipr,lokasi_ipr,masa_sk,no_sk,luas_bangunan');
 		$this->db->from('list_ipr');
-        $this->db->where('kecamatan',$kecamatan);
+        // $this->db->where('kecamatan',$kecamatan);
+        $this->db->like('kecamatan',$kecamatan);
         $query = $this->db->get();
 		return $query->result();
     }
@@ -40,6 +41,14 @@ class Model_db extends CI_Model{
         $this->db->select('kecamatan, count(pemegang) as jml_pemegang');
         $this->db->from('list_ipt');
         $this->db->where('status', $nonaktif);
+        $this->db->group_by('kecamatan');
+        $this->db->order_by('jml_pemegang','DESC');
+        return $this->db->get();
+    }
+
+    function get_per_kecamatan_ipr(){
+        $this->db->select('kecamatan, count(pemegang) as jml_pemegang');
+        $this->db->from('list_ipr');
         $this->db->group_by('kecamatan');
         $this->db->order_by('jml_pemegang','DESC');
         return $this->db->get();

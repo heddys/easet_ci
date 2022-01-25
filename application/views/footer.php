@@ -100,7 +100,6 @@
   </script>
 
   <script>
-
   $('#exampleipr').on('click','.list_ipr',function(){
     var id = $(this).attr('data');
     $('#modal-xl1').modal('show');
