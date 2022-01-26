@@ -59,8 +59,7 @@ class Home extends CI_Controller {
 	}
 
 	public function tampil_per_ipr(){
-		// $kecamatan = $this->input->post('id');
-		$kecamatan = "Semampir";
+		$kecamatan = $this->input->post('id');
 		$result = $this->model_db->get_ipr_by($kecamatan);
 		echo json_encode($result);
 

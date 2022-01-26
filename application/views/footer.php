@@ -58,6 +58,14 @@
   $(function () {
     $("#example1").DataTable();
     $("#exampleipr").DataTable();
+    $("#tabel_modal").dataTable({
+      "bPaginate": true,
+      "bLengthChange": true,
+      "bFilter": true,
+      "bSort": false,
+      "bInfo": true,
+      "bAutoWidth": true
+    });
   });
 
   $('#example1').on('click','.list_pemegang',function(){
@@ -98,7 +106,6 @@
     });
   }); 
   </script>
-
   <script>
   $('#exampleipr').on('click','.list_ipr',function(){
     var id = $(this).attr('data');
@@ -119,8 +126,8 @@
                       '<tr>'+
                         '<td><center>'+x+'</center></td>'+
                         '<td><center>'+data[i].no_sk+'</center></td>'+
-                        '<td>'+data[i].lokasi_ipr+'</td>'+
-                        '<td><center>'+data[i].luas_bangunan'</center></td>'+
+                        '<td><center>'+data[i].lokasi_ipr+'</td>'+
+                        '<td><center>'+data[i].luas_bangunan+'</center></td>'+
                         '<td><center>'+data[i].masa_sk+'</center></td>'+
                         '<td><center>'+data[i].id_ipr+'</center></td>'+
                       '</tr>';
