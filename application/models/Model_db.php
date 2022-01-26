@@ -28,7 +28,7 @@ class Model_db extends CI_Model{
     }
 
     function get_ipr_by($kecamatan){
-        $this->db->select('id_ipr,lokasi_ipr,masa_sk,no_sk,luas_bangunan');
+        $this->db->select('id_ipr,lokasi_ipr,masa_sk,pemegang,no_sk,luas_bangunan,luas_tanah');
 		$this->db->from('list_ipr');
         // $this->db->where('kecamatan',$kecamatan);
         $this->db->like('kecamatan',$kecamatan);

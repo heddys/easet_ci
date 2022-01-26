@@ -99,24 +99,26 @@
                     <table id="tabel_modal" class="table table-bordered table-striped">
                       <thead>
                       <tr>
-                        <th><center>No.</center></th>
+                        <th><center>ID IPR</center></th>
                         <th><center>No. SK</center></th>
+                        <th><center>Pemegang</center></th>
                         <th><center>Alamat</center></th>
                         <th><center>Luas Bangunan(m2)</center></th>
+                        <th><center>Luas Tanah(m2)</center></th>
                         <th><center>Masa SK</center></th>
-                        <th><center>ID IPR</center></th>
                       </tr>
                       </thead>
                       <tbody id="tampil_data_ipr">
                       </tbody>
                       <tfoot>
                       <tr>
-                        <th><center>No.</center></th>
+                        <th><center>ID IPR</center></th>
                         <th><center>No. SK</center></th>
+                        <th><center>Pemegang</center></th>
                         <th><center>Alamat</center></th>
                         <th><center>Luas Bangunan(m2)</center></th>
+                        <th><center>Luas Tanah(m2)</center></th>
                         <th><center>Masa SK</center></th>
-                        <th><center>ID IPR</center></th>
                       </tr>
                       </tfoot>
                     </table>
