@@ -122,6 +122,7 @@
                         '<td><center>'+data[i].luas_bangunan+'</center></td>'+
                         '<td><center>'+data[i].luas_tanah+'</center></td>'+
                         '<td><center>'+data[i].masa_sk+'</center></td>'+
+                        '<td><center><a href="https://sigis.surabaya.go.id/popup/blp/ipr/'+data[i].id_ipr+'/view/N9YUQ3936e" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success"><i class="far fa-map"></i></a></center></td>'+
                       '</tr>';
             }
             $('#modal-xl1').find('#tampil_data_ipr').html(html);
