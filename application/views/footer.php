@@ -97,8 +97,6 @@
         }
     });
   }); 
-  </script>
-  <script>
   $('#exampleipr').on('click','.list_ipr',function(){
     var id = $(this).attr('data');
     $('#modal-xl1').modal('show');
@@ -126,6 +124,45 @@
                       '</tr>';
             }
             $('#modal-xl1').find('#tampil_data_ipr').html(html);
+
+        },
+        error: function() {
+          alert('Koneksi Gagal');
+        }
+    });
+  });
+  $('#examplembr').on('click','.list_mbr',function(){
+    var id = $(this).attr('data');
+    $('#modal-xl2').modal('show');
+    $.ajax({
+      type: 'ajax',
+      method: 'post',
+      url: '<?php echo site_url();?>/home/tampil_per_reg_mbr',
+      data:{id:id},
+      async: false,
+      dataType: 'json',
+      success: function(data){
+          var html = '';
+          var i=data.length;
+          var x = 1;
+            for (i=0; i < data.length; i++) {
+                html += 
+                      '<tr>'+
+                        '<td><center>'+x+'</center></td>'+
+                        '<td><center>'+data[i].kategori_usaha+'</center></td>'+
+                        '<td><center>'+data[i].nama_usaha+'</center></td>'+
+                        '<td><center>'+data[i].jumlah_kelompok_kerja+'</td>'+
+                        '<td><center>'+data[i].jumlah_pekerja+'</center></td>'+
+                        '<td><center>'+data[i].jumlah_permintaan+'</center></td>'+
+                        '<td><center>'+data[i].satuan+'</center></td>'+
+                        '<td><center>'+data[i].harga_satuan+'</center></td>'+
+                        '<td><center>'+data[i].jumlah_permintaan*data[i].harga_satuan+'</center></td>'+
+                        '<td><center>'+data[i].keterangan+'</center></td>'+
+                        
+                      '</tr>';
+                      x++;
+            }
+            $('#modal-xl2').find('#tampil_data_mbr').html(html);
 
         },
         error: function() {

@@ -127,6 +127,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo site_url('home/mbr');?>" class="nav-link">
+              <i class="nav-icon fas fa-globe" aria-hidden="true"></i>
+              <p>
+                Data MBR 
+                <span class="badge badge-info right">89</span>
+              </p>
+            </a>
+          </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
