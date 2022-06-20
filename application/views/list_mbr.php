@@ -24,9 +24,6 @@
           <!-- /.card -->
 
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">List Ijin Pemakaian Tanah</h3>
-            </div>
             <!-- /.card-header -->
             <div class="card-body" style="overflow-x:auto;">
               <table id="examplembr" class="table table-bordered table-striped">
@@ -63,6 +60,7 @@
                         <td class="align-middle">
                         <center>
                                 <a href="https://sigis.surabaya.go.id/popup/simbada/show-no-reg/<?php echo $row->register;?>" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success"><i class="far fa-map"></i></a>
+                                <!-- https://sigis.surabaya.go.id/popup/simbada/show-reg/ -->
                                 <a href="javascript:;" class="btn btn-sm btn-primary list_mbr" data="<?php echo $row->register?>" ><i class="far fa-eye"></i></a>
                         </center>
                         </td>
@@ -95,7 +93,7 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Data Pemegang IPT</h4>
+              <h4 class="modal-title">Data Jenis Usaha MBR</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

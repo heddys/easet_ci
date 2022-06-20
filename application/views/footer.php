@@ -58,6 +58,7 @@
   $(function () {
     $("#example1").DataTable();
     $("#exampleipr").DataTable();
+    $("#examplembr").DataTable();
   });
 
   $('#example1').on('click','.list_pemegang',function(){
