@@ -66,6 +66,17 @@ class Model_db extends CI_Model{
         return $this->db->get_where('data_usaha_mbr', array ('register_aset' => $reg));
     }
 
+    public function get_ipt_laporan()
+    {
+        $this->db->select('*');
+        $this->db->from('list_ipt');
+        $this->db->where('register !=','');
+        $this->db->order_by('register','ASC');
+        $this->db->order_by('status','ASC');
+        return $this->db->get();
+        
+    }
+
 
 }
 
