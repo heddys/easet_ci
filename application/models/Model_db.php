@@ -54,6 +54,29 @@ class Model_db extends CI_Model{
         return $this->db->get();
     }
 
+    public function get_data_mbr()
+    {
+        $query = $this->db->query("SELECT a.* ,count(b.register_aset) as total,c.kode108_baru,c.nama_barang_baru,c.merk_alamat_baru,c.no_sertifikat FROM `data_aset_mbr` a left join data_usaha_mbr b on a.register=b.register_aset inner join kib_2022_audited c on a.register=c.register group by a.register order by total desc");
+
+        return $query;
+    }
+
+    public function get_reg_mbr($reg)
+    {
+        return $this->db->get_where('data_usaha_mbr', array ('register_aset' => $reg));
+    }
+
+    public function get_ipt_laporan()
+    {
+        $this->db->select('*');
+        $this->db->from('list_ipt');
+        $this->db->where('register !=','');
+        $this->db->order_by('register','ASC');
+        $this->db->order_by('status','ASC');
+        return $this->db->get();
+        
+    }
+
 
 }
 

@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Ijin Pemakaian Tanah</h1>
+            <a href="<?php echo site_url('home/laporan_ipt');?>" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Cetak Laporan</a>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

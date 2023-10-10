@@ -53,7 +53,7 @@
                     <td><center><?php echo $row->jumlah_ipr;?></center></td>
                     <td>
                       <center>
-                      <a href="https://sigis.surabaya.go.id/popup/simbada/show-no-reg/<?php echo $row->register_ipr;?>" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success"><i class="far fa-map"></i></a>
+                      <!-- <a href="https://sigis.surabaya.go.id/popup/simbada/show-no-reg/<?php echo $row->register_ipr;?>" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success"><i class="far fa-map"></i></a> -->
                       <a href="javascript:;" class="btn btn-sm btn-primary list_ipr" data="<?php echo $row->kecamatan?>" ><i class="far fa-eye"></i></a>
                       </center>
                     </td>
@@ -106,6 +106,7 @@
                         <th><center>Luas Bangunan(m2)</center></th>
                         <th><center>Luas Tanah(m2)</center></th>
                         <th><center>Masa SK</center></th>
+                        <th><center>Lihat Peta</center></th>
                       </tr>
                       </thead>
                       <tbody id="tampil_data_ipr">
@@ -119,6 +120,7 @@
                         <th><center>Luas Bangunan(m2)</center></th>
                         <th><center>Luas Tanah(m2)</center></th>
                         <th><center>Masa SK</center></th>
+                        <th><center>Lihat Peta</center></th>
                       </tr>
                       </tfoot>
                     </table>

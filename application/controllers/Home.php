@@ -64,4 +64,29 @@ class Home extends CI_Controller {
 		echo json_encode($result);
 
 	}
+
+	public function mbr()
+	{
+		$data['data_mbr'] = $this->model_db->get_data_mbr();
+
+		$this->load->view('header');
+		$this->load->view('list_mbr',$data);
+		$this->load->view('footer');
+	}
+
+	public function tampil_per_reg_mbr()
+	{
+		$reg = $this->input->post('id');
+		$result = $this->model_db->get_reg_mbr($reg)->result();
+		echo json_encode($result);
+
+	}
+
+	public function laporan_ipt()
+	{
+		ini_set("memory_limit", "512M");
+		set_time_limit(0);
+		$data['ipt']=$this->model_db->get_ipt_laporan()->result();
+		$this->load->view('laporan_ipt',$data);
+	}
 }
